@@ -1,0 +1,19 @@
+  
+  
+  [1XReferences[101X
+  
+  [[20XCG07[120X]  [16XCical{\`o},  S.  and  de  Graaf,  W.[116X, [17XNon-associative Gr\"obner bases, finitely-presented Lie rings and the Engel
+  condition[117X, in ISSAC 2007, ACM, New York (2007), 100--107.
+  
+  [[20XCG09[120X]  [16XCical{\`o},  S.  and de Graaf, W. A.[116X, [17XNon-associative Gr\"obner bases, finitely-presented Lie rings and the Engel
+  condition. II[117X, [18XJ. Symbolic Comput.[118X, [19X44[119X, 7 (2009), 786--800.
+  
+  [[20XCGV11[120X]  [16XCical{\`o},  S.,  de Graaf, W. A. and Vaughan-Lee, M.[116X, [17XAn effective version of the Lazard correspondence[117X (2011),
+  ((submitted)).
+  
+  [[20XKhu98[120X]  [16XKhukhro,  E.  I.[116X,  [17Xp-automorphisms  of  finite p-groups[117X, Cambridge University Press, London Mathematical Society
+  Lecture Note Series, [19X246[119X, Cambridge (1998), xviii+204 pages.
+  
+  
+  
+  [32X

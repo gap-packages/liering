@@ -1,0 +1,89 @@
+  
+  
+                                    [1X[5XLieRing[105X[101X
+  
+  
+                                   [1XLie Rings[101X
+  
+  
+                                  Version 2.1
+  
+  
+                                 December 2011
+  
+  
+                                 Serena Cicalò
+  
+                                Willem de Graaf
+  
+  
+  
+  Serena Cicalò
+      Email:    [7Xmailto:cicalo@science.unitn.it[107X
+      Address:  [33X[0;14YDipartimento di Matematica e Informatica[133X
+                [33X[0;14YVia Ospedale, 72[133X
+                [33X[0;14Y09124 Cagliari[133X
+                [33X[0;14YItaly[133X
+  
+  
+  Willem de Graaf
+      Email:    [7Xmailto:degraaf@science.unitn.it[107X
+      Homepage: [7Xhttp://www.science.unitn.it/~degraaf/[107X
+      Address:  [33X[0;14YDipartimento di Matematica[133X
+                [33X[0;14YVia Sommarive 14[133X
+                [33X[0;14YI-38050 Povo (Trento)[133X
+                [33X[0;14YItaly[133X
+  
+  
+  
+  -------------------------------------------------------
+  [1XAbstract[101X
+  [33X[0;0YThis package provides functions for constructing and working with Lie rings.
+  There  are  functions for dealing with finitely-presented Lie rings, and for
+  performing  the  Lazard  correspondence.  The  package also contains a small
+  database of finitely-generated Lie rings satisfying an Engel condition.[133X
+  
+  
+  -------------------------------------------------------
+  [1XCopyright[101X
+  [33X[0;0Y© 2011 Serena Cicalò and Willem de Graaf[133X
+  
+  
+  -------------------------------------------------------
+  
+  
+  [1XContents (LieRing)[101X
+  
+  1 [33X[0;0YIntroduction[133X
+    1.1 [33X[0;0YPreliminaries[133X
+    1.2 [33X[0;0YThe free Lie ring[133X
+    1.3 [33X[0;0YThe Lazard correspondence[133X
+  2 [33X[0;0YThe functions[133X
+    2.1 [33X[0;0YThe free Lie ring[133X
+      2.1-1 FreeLieRing
+      2.1-2 Degree
+    2.2 [33X[0;0YCreating Lie rings[133X
+      2.2-1 IsLieRing
+      2.2-2 LieRingByStructureConstants
+      2.2-3 FpLieRing
+      2.2-4 FpLieAlgebra
+    2.3 [33X[0;0YWorking with Lie rings[133X
+      2.3-1 Basis
+      2.3-2 StructureConstantsTable
+      2.3-3 Torsion
+      2.3-4 Coefficients
+      2.3-5 SubLieRing
+      2.3-6 LieRingIdeal
+      2.3-7 NaturalHomomorphismByIdeal
+      2.3-8 LieLowerCentralSeries
+      2.3-9 LieLowerPCentralSeries
+      2.3-10 LieCentre
+      2.3-11 TensorWithField
+    2.4 [33X[0;0YThe Lazard correspondence[133X
+      2.4-1 PGroupToLieRing
+      2.4-2 LieRingToPGroup
+    2.5 [33X[0;0YThe database of [22Xn[122X-Engel Lie rings[133X
+      2.5-1 SmallNEngelLieRing
+  
+  
+  [32X

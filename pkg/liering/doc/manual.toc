@@ -1,0 +1,32 @@
+\contentsline {chapter}{\numberline {1}\leavevmode {\color {Chapter }Introduction}}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}\leavevmode {\color {Chapter }Preliminaries}}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}\leavevmode {\color {Chapter }The free Lie ring }}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}\leavevmode {\color {Chapter }The Lazard correspondence }}{5}{section.1.3}
+\contentsline {chapter}{\numberline {2}\leavevmode {\color {Chapter }The functions}}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}\leavevmode {\color {Chapter }The free Lie ring}}{6}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}\leavevmode {\color {Chapter }FreeLieRing}}{6}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}\leavevmode {\color {Chapter }Degree}}{7}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}\leavevmode {\color {Chapter } Creating Lie rings }}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}\leavevmode {\color {Chapter }IsLieRing}}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}\leavevmode {\color {Chapter }LieRingByStructureConstants}}{7}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}\leavevmode {\color {Chapter }FpLieRing}}{7}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}\leavevmode {\color {Chapter }FpLieAlgebra}}{8}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}\leavevmode {\color {Chapter } Working with Lie rings }}{8}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}\leavevmode {\color {Chapter }Basis}}{8}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}\leavevmode {\color {Chapter }StructureConstantsTable}}{9}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}\leavevmode {\color {Chapter }Torsion}}{9}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}\leavevmode {\color {Chapter }Coefficients}}{9}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}\leavevmode {\color {Chapter }SubLieRing}}{10}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}\leavevmode {\color {Chapter }LieRingIdeal}}{10}{subsection.2.3.6}
+\contentsline {subsection}{\numberline {2.3.7}\leavevmode {\color {Chapter }NaturalHomomorphismByIdeal}}{10}{subsection.2.3.7}
+\contentsline {subsection}{\numberline {2.3.8}\leavevmode {\color {Chapter }LieLowerCentralSeries}}{11}{subsection.2.3.8}
+\contentsline {subsection}{\numberline {2.3.9}\leavevmode {\color {Chapter }LieLowerPCentralSeries}}{11}{subsection.2.3.9}
+\contentsline {subsection}{\numberline {2.3.10}\leavevmode {\color {Chapter }LieCentre}}{12}{subsection.2.3.10}
+\contentsline {subsection}{\numberline {2.3.11}\leavevmode {\color {Chapter }TensorWithField}}{12}{subsection.2.3.11}
+\contentsline {section}{\numberline {2.4}\leavevmode {\color {Chapter }The Lazard correspondence}}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}\leavevmode {\color {Chapter }PGroupToLieRing}}{12}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}\leavevmode {\color {Chapter }LieRingToPGroup}}{13}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}\leavevmode {\color {Chapter }The database of $n$-Engel Lie rings}}{14}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}\leavevmode {\color {Chapter }SmallNEngelLieRing}}{14}{subsection.2.5.1}
+\contentsline {chapter}{References}{15}{chapter*.4}
+\contentsline {chapter}{Index}{16}{section*.5}

@@ -1,0 +1,26 @@
+\begin{thebibliography}{CdGVL11}
+
+\bibitem[CdG07]{cicgra1}
+Serena Cical{\`o} and Willem de~Graaf.
+\newblock Non-associative {G}r\"obner bases, finitely-presented {L}ie rings and
+  the {E}ngel condition.
+\newblock In {\em I{SSAC} 2007}, pages 100--107. ACM, New York, 2007.
+
+\bibitem[CdG09]{cicgra2}
+Serena Cical{\`o} and Willem~A. de~Graaf.
+\newblock Non-associative {G}r\"obner bases, finitely-presented {L}ie rings and
+  the {E}ngel condition. {II}.
+\newblock {\em J. Symbolic Comput.}, 44(7):786--800, 2009.
+
+\bibitem[CdGVL11]{cicgravl}
+Serena Cical{\`o}, Willem~A. de~Graaf, and Michael Vaughan-Lee.
+\newblock An effective version of the {L}azard correspondence.
+\newblock submitted, 2011.
+
+\bibitem[Khu98]{khukhro98}
+E.~I. Khukhro.
+\newblock {\em {$p$}-automorphisms of finite {$p$}-groups}, volume 246 of {\em
+  London Mathematical Society Lecture Note Series}.
+\newblock Cambridge University Press, Cambridge, 1998.
+
+\end{thebibliography}

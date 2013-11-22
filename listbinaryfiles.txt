@@ -1,0 +1,13 @@
+liering/doc/manual.log
+liering/doc/manual.bbl
+liering/doc/manual.pdf
+liering/doc/manual.blg
+liering/doc/manual.aux
+liering/doc/manual.toc
+liering/doc/manual.pnr
+liering/doc/manual.brf
+liering/doc/manual.six
+liering/doc/manual.ind
+liering/doc/manual.ilg
+liering/doc/manual.out
+liering/doc/manual.idx
