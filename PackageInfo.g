@@ -11,8 +11,8 @@
 SetPackageInfo( rec(
 PackageName := "LieRing",
 Subtitle := "finitely presented Lie rings",        
-Version := "2.1",
-Date := "22/12/2011",
+Version := "2.2",
+Date := "11/12/2013",
 ArchiveURL := Concatenation("http://www.science.unitn.it/~degraaf/liering/liering-",
                             ~.Version),
 ArchiveFormats := ".tar.gz",
@@ -44,9 +44,9 @@ Persons := [
   Institution := "Dipartimento di Matematica"
   )
 ],
-Status := "other",
-#CommunicatedBy := ,
-#AcceptDate := ,
+Status := "accepted",
+CommunicatedBy := "Max Neunhoeffer (Cologne)",
+AcceptDate := "12/2013",
 PackageDoc := rec(
   BookName  := "LieRing",
   ArchiveURLSubset := ["doc"],

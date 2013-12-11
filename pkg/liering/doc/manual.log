@@ -1,17 +1,11 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.8)  16 JUN 2012 16:54
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.10.13)  11 DEC 2013 12:11
 entering extended mode
  %&-line parsing enabled.
 **manual
 (./manual.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
-ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
-9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
-skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
-orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
-, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
-rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+yphenation, loaded.
 (/usr/share/texmf-texlive/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texmf-texlive/tex/latex/base/size11.clo
@@ -33,9 +27,8 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 (/usr/share/texmf-texlive/tex/latex/ltxmisc/a4wide.sty
 Package: a4wide 1994/08/30
 
-(/usr/share/texmf-texlive/tex/latex/amscls/a4.sty
-Style option `A4' 1.2a <30 Nov 90> (NP and JLB)
-English documentation   <26 Feb 90> (JLB)
+(/usr/share/texmf-texlive/tex/latex/ntgclass/a4.sty
+Package: a4 2004/04/15 v1.2g A4 based page layout
 ))
 (/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
@@ -73,7 +66,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 Package color Info: Driver file: pdftex.def on input line 130.
 
 (/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 \Gread@gobject=\count88
 ))
 (/usr/share/texmf-texlive/tex/latex/fancyvrb/fancyvrb.sty
@@ -370,7 +363,7 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 87.
 (/usr/share/texmf-texlive/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-(/usr/share/texmf/tex/context/base/supp-pdf.mkii
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count100
 \scratchdimen=\dimen107
@@ -647,28 +640,28 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6028 strings out of 493848
- 86910 string characters out of 1152824
- 151423 words of memory out of 3000000
- 9065 multiletter control sequences out of 15000+50000
+ 6031 strings out of 495061
+ 87000 string characters out of 1182620
+ 150740 words of memory out of 3000000
+ 8969 multiletter control sequences out of 15000+50000
  75400 words of font info for 101 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
+ 28 hyphenation exceptions out of 8191
  38i,7n,39p,604b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts
-/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
-cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb></us
-r/share/texmf/fonts/type1/public/cm-super/sfst1095.pfb></usr/share/texmf/fonts/
-type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-supe
-r/sftt1095.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></
-usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-t
-exlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/typ
-e1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.
-pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on manual.pdf (16 pages, 248321 bytes).
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc} </home/serenapj/.texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecst1095.600pk> </home/serenapj/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/serenapj/.texmf-var/fonts/pk/lj
+four/jknappen/ec/ectt1000.600pk></usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sh
+are/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive
+/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/
+helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb
+></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-t
+exlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on manual.pdf (16 pages, 198078 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
+ 451 PDF objects out of 1000 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
  97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

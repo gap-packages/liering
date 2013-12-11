@@ -98,8 +98,8 @@
 {\Huge \textbf{Lie Rings\mbox{}}}\\
 \vfill
 
-{\Huge Version 2.1\mbox{}}\\[1cm]
-{December 2011\mbox{}}\\[1cm]
+{\Huge Version 2.2\mbox{}}\\[1cm]
+{December 2013\mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{ Serena Cical{\a`o}   \mbox{}}}\\
 {\Large \textbf{ Willem de Graaf    \mbox{}}}\\
@@ -139,7 +139,7 @@ database of finitely-generated Lie rings satisfying an Engel condition. \mbox{}}
 {\small 
 \section*{Copyright}
 \logpage{[ 0, 0, 2 ]}
- {\copyright} 2011 Serena Cical{\a`o} and Willem de Graaf \mbox{}}\\[1cm]
+ {\copyright} 2013 Serena Cical{\a`o} and Willem de Graaf \mbox{}}\\[1cm]
 \newpage
 
 \def\contentsname{Contents\logpage{[ 0, 0, 3 ]}}
@@ -344,7 +344,7 @@ number of basis elements of the Lie ring. If the i-th element of this list is $m
 example below we create the Lie ring with basis elements $x,y,z$, with $[x,y]=z$, $3x=6y=3z=0$. 
 
  The multiplication table has to be created using the \textsf{GAP} functions for constructing multiplication tables of Lie algebras. In
-particular, we refer to the \textsf{GAP} reference manual for descriptions of the functions \texttt{EmptySCTable} (EmptySCTable???) \texttt{SetEntrySCTable} (SetEntrySCTable???) 
+particular, we refer to the \textsf{GAP} reference manual for descriptions of the functions \texttt{EmptySCTable} (\textbf{Reference: EmptySCTable}) \texttt{SetEntrySCTable} (\textbf{Reference: SetEntrySCTable}) 
 \begin{Verbatim}[commandchars=!@|,fontsize=\small,frame=single,label=Example]
   !gapprompt@gap>| !gapinput@T:= EmptySCTable( 3, 0, "antisymmetric" );;|
   !gapprompt@gap>| !gapinput@SetEntrySCTable( T, 1, 2, [1,3] );|

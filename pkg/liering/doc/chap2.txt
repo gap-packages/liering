@@ -85,7 +85,7 @@
   [33X[0;0YThe  multiplication  table  has  to  be  created using the [5XGAP[105X functions for
   constructing  multiplication tables of Lie algebras. In particular, we refer
   to  the  [5XGAP[105X reference manual for descriptions of the functions [2XEmptySCTable[102X
-  ([14XEmptySCTable???[114X) [2XSetEntrySCTable[102X ([14XSetEntrySCTable???[114X)[133X
+  ([14XReference: EmptySCTable[114X) [2XSetEntrySCTable[102X ([14XReference: SetEntrySCTable[114X)[133X
   
   [4X[32X  Example  [32X[104X
     [4X[25Xgap>[125X [27XT:= EmptySCTable( 3, 0, "antisymmetric" );;[127X[104X
