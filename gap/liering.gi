@@ -209,10 +209,12 @@ end);
 
 InstallMethod( \in,
         "for LR element and Lie Ring",
-        true, [ IsLRElement, IsLieRing ], 0,
+        true, [ IsObject, IsLieRing ], 0,
         function( x, L )
 
     local B, cc;
+
+    if not IsLRElement(x) then return false; fi;
 
     if IsStandardBasisOfLieRing( Basis(L) ) then
        return IsIdenticalObj( ElementsFamily( FamilyObj(L) ), FamilyObj(x) );
@@ -406,6 +408,8 @@ LRPrivateFunctions.sub_lie_ring:= function( arg )
          is_bas:= false;
       fi;
 
+      if Length(vv)=0 then vv:= [ Zero(L) ]; fi;
+
       B:= Basis( Parent(L) );
       n:= Length( BasisVectors( B ) );
       bas:= TriangulizedIntegerMat( List( vv, x -> Coefficients( B, x ) ) );
@@ -568,7 +572,7 @@ end;
 InstallMethod( SubLieRing,
     "for Lie ring and list of its elements",
     true, [ IsLieRing,
-            IsLRElementCollection ], 0,
+            IsList ], 0,
     function( L, vv )
 
     return LRPrivateFunctions.sub_lie_ring( L, vv );
@@ -604,6 +608,8 @@ LRPrivateFunctions.ideal_lie_ring:= function( arg )
          is_bas:= false;
       fi;
 
+      if Length(vv)=0 then vv:= [ Zero(L) ]; fi;
+
       B:= Basis( Parent(L) );
       n:= Length( BasisVectors( B ) );
 
@@ -633,6 +639,7 @@ LRPrivateFunctions.ideal_lie_ring:= function( arg )
 
          SetLeftActingDomain( K, Integers );
          SetGeneratorsOfLeftOperatorRing( K, [ ] );
+	 SetGeneratorsOfIdeal( K, vv );
 
          SetUnderlyingLeftModule( BK, K );  
          SetBasisVectors( BK, [ ] );
@@ -751,7 +758,7 @@ LRPrivateFunctions.ideal_lie_ring:= function( arg )
 
       SetLeftActingDomain( K, Integers );
       SetGeneratorsOfLeftOperatorRing( K, nb );
-
+      SetGeneratorsOfIdeal( K, vv );
       SetUnderlyingLeftModule( BK, K );  
       SetBasisVectors( BK, nb );
       SetTorsion( BK, tors );
@@ -769,7 +776,7 @@ end;
 InstallMethod( LieRingIdeal,
     "for Lie ring and list of its elements",
     true, [ IsLieRing,
-            IsLRElementCollection ], 0,
+            IsList ], 0,
     function( L, vv )
 
     return LRPrivateFunctions.ideal_lie_ring( L, vv );

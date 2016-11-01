@@ -444,6 +444,8 @@ LRPrivateFunctions.FpLieRingHOM:= function( A, R, bound )
            m1, m2, m3, j, f1, f2, f3, c, m, x, h, newB, mat, b, cc, ss, Qi, bas, tor, 
            NB, Tors, nocol, tors, basinds, k, T, entry, added, mninds, a1, a2, a3, a4, cf, K;
 
+
+
      zero:= Zero( LeftActingDomain(A) );
      one:= One( LeftActingDomain( A ) );
 
@@ -830,7 +832,9 @@ LRPrivateFunctions.FpLieRingHOM:= function( A, R, bound )
                    fi;
                od;
                for k in [1..Length(cc)] do
-                   cf[basinds[deg][k]]:= cc[k];
+	           if not IsZero( basinds[deg][k] ) then
+                      cf[basinds[deg][k]]:= cc[k];
+		   fi;
                od;
             fi;
          fi;
@@ -1664,7 +1668,7 @@ LRPrivateFunctions.FpLieRingNH:= function( A, RR, bound )
             od;
             entry:= [ ];
             for k in [1..Length(cc)] do
-                if cc[k] <> 0 then
+                if cc[k] <> 0 and basinds[k] <> 0 then
                    cf[ basinds[k] ]:= cc[k];
                 fi;
             od;
