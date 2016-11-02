@@ -80,14 +80,14 @@ DeclareAttribute( "Torsion", IsBasisOfLieRing );
 #O  SubLieRing( <L>, <gens> )
 #O  SubLieRing( <L>, <gens>, "basis" )
 ##
-DeclareOperation( "SubLieRing", [ IsLieRing, IsCollection ] );
+DeclareOperation( "SubLieRing", [ IsLieRing, IsList ] );
 
 #############################################################################
 ##
 #O  LieRingIdeal( <L>, <gens> )
 #O  LieRingIdeal( <L>, <gens>, "basis" )
 ##
-DeclareOperation( "LieRingIdeal", [ IsLieRing, IsCollection ] );
+DeclareOperation( "LieRingIdeal", [ IsLieRing, IsList ] );
 
 
 #############################################################################

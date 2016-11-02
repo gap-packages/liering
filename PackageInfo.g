@@ -11,8 +11,8 @@
 SetPackageInfo( rec(
 PackageName := "LieRing",
 Subtitle := "finitely presented Lie rings",        
-Version := "2.2",
-Date := "11/12/2013",
+Version := "2.3",
+Date := "01/11/2016",
 ArchiveURL := Concatenation("http://www.science.unitn.it/~degraaf/liering/liering-",
                             ~.Version),
 ArchiveFormats := ".tar.gz",

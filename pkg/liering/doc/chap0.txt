@@ -6,10 +6,10 @@
                                    [1XLie Rings[101X
   
   
-                                  Version 2.2
+                                  Version 2.3
   
   
-                                 December 2013
+                                 November 2016
   
   
                                  Serena Cicalò
@@ -46,7 +46,7 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y© 2013 Serena Cicalò and Willem de Graaf[133X
+  [33X[0;0Y© 2016 Serena Cicalò and Willem de Graaf[133X
   
   
   -------------------------------------------------------

@@ -12,7 +12,7 @@
 <TitlePage>
   <Title>&LieRing;</Title>
   <Subtitle>Lie Rings</Subtitle>
-  <Version>Version 2.2</Version>
+  <Version>Version 2.3</Version>
 
 <Author>
   Serena Cical&#242;
@@ -40,7 +40,7 @@ Italy<Br/>
 
 
 
-  <Date>December 2013</Date>
+  <Date>November 2016</Date>
 
 
 
@@ -52,7 +52,7 @@ a small database of finitely-generated Lie rings satisfying an Engel condition.
 </Abstract>
 
 <Copyright>
-  &copyright; 2013 Serena Cical&#242; and Willem de Graaf 
+  &copyright; 2016 Serena Cical&#242; and Willem de Graaf 
 </Copyright>
   
 
