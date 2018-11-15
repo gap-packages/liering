@@ -57,7 +57,7 @@ PackageDoc := rec(
   Autoload  := true
 ),
 README_URL := 
-  "http://www.science.unitn.it/~degraaf/liering/README.liering",
+  "http://www.science.unitn.it/~degraaf/liering/README.md",
 PackageInfoURL := 
   "http://www.science.unitn.it/~degraaf/liering/PackageInfo.g",
 AbstractHTML := "The package <span class=\"pkgname\">LieRing</span> contains \
