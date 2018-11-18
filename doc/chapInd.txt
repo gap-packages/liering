@@ -1,0 +1,27 @@
+  
+  
+  [1XIndex[101X
+  
+  [2XBasis[102X 2.3-1 
+  [2XCoefficients[102X 2.3-4 
+  [2XDegree[102X 2.1-2 
+  [2XFpLieAlgebra[102X 2.2-4 
+  [2XFpLieRing[102X 2.2-3 
+  [2XFreeLieRing[102X 2.1-1  2.1-1  2.1-1  2.1-1 
+  [2XIsLieRing[102X 2.2-1 
+  [2XLieCentre[102X 2.3-10 
+  [2XLieLowerCentralSeries[102X 2.3-8 
+  [2XLieLowerPCentralSeries[102X 2.3-9 
+  [2XLieRingByStructureConstants[102X 2.2-2 
+  [2XLieRingIdeal[102X 2.3-6 
+  [2XLieRingToPGroup[102X 2.4-2 
+  [2XNaturalHomomorphismByIdeal[102X 2.3-7 
+  [2XPGroupToLieRing[102X 2.4-1 
+  [2XSmallNEngelLieRing[102X 2.5-1 
+  [2XStructureConstantsTable[102X 2.3-2 
+  [2XSubLieRing[102X 2.3-5 
+  [2XTensorWithField[102X 2.3-11 
+  [2XTorsion[102X 2.3-3 
+  
+  
+  -------------------------------------------------------

@@ -1,101 +1,105 @@
-#############################################################################
-##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
-##
+#####################################################################################
+#
+#  PackageInfo.g                                      Serena Cicalo and Willem de Graaf
+#
+#
+# The package LieRing is free software; you can redistribute it and/or modify it under the 
+# terms of the GNU General Public License as published by the Free Software Foundation; 
+# either version 2 of the License, or (at your option) any later version. 
+
 
 SetPackageInfo( rec(
-
-PackageName := "GitHubPagesForGAP",
-
-Subtitle := "A GitHub Pages generator for GAP packages",
-Version := "0.2",
-Date := "04/02/2017", # dd/mm/yyyy format
+PackageName := "LieRing",
+Subtitle := "Computing with finitely presented Lie rings",        
+Version := "2.3",
+Date := "01/11/2016", # this is in dd/mm/yyyy format
 
 Persons := [
-  rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
-    IsAuthor      := true,
-    IsMaintainer  := true,
-    Email         := "max.horn@math.uni-giessen.de",
-    WWWHome       := "http://www.quendi.de/math",
-    PostalAddress := Concatenation(
-                       "AG Algebra\n",
-                       "Mathematisches Institut\n",
-                       "Justus-Liebig-Universität Gießen\n",
-                       "Arndtstraße 2\n",
-                       "35392 Gießen\n",
-                       "Germany" ),
-    Place         := "Gießen",
-    Institution   := "Justus-Liebig-Universität Gießen"
-  ),
+    rec( 
+      LastName      := "Cicalò",
+      FirstNames    := "Serena",
+      IsAuthor      := true,
+      IsMaintainer  := true,
+      Email         := "cicalo@science.unitn.it",
+      PostalAddress := Concatenation( [
+                     "Serena Cicalò\n",
+                         "Dipartimento di Matematica e Informatica\n",
+                         "Via Ospedale 72\n",
+                         "Italy" ]),
+      Place         := "Cagliari",
+      Institution   := "Universita' di Cagliari"
+
+             ),
 
   rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
-    IsAuthor      := true,
-    IsMaintainer  := false,
-    #Email         := "author@example.com",
-  ),
-
-  rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
-    IsMaintainer  := true,
-    #Email         := "janitor@example.com",
-  ),
+  LastName := "de Graaf",
+  FirstNames := "Willem Adriaan",
+  IsAuthor := true,
+  IsMaintainer := true,
+  Email := "degraaf@science.unitn.it",
+  WWWHome := "http://www.science.unitn.it/~degraaf",
+  Place := "Trento",
+  Institution := "Dipartimento di Matematica"
+  )
 ],
+Status := "accepted",
+CommunicatedBy := "Max Neunhoeffer (Cologne)",
+AcceptDate := "12/2013",
 
-Status := "other",
+PackageWWWHome  := "https://gap-packages.github.io/liering/",
+README_URL      := Concatenation( ~.PackageWWWHome, "README.md" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/gap-packages/liering",
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/liering-", ~.Version ),
+ArchiveFormats := ".tar.gz",
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "gap-system",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
-
-PackageWWWHome := Concatenation("https://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README.md" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
-
-ArchiveFormats := ".tar.gz .tar.bz2",
-
-AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub Pages.",
 
 PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
+  BookName  := "LieRing",
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
   SixFile   := "doc/manual.six",
-  LongTitle := "A GitHub Pages generator for GAP packages",
+  LongTitle := "Computing with finitely presented Lie rings",
+  Autoload  := true
 ),
 
-# The following dependencies are fake and for testing / demo purposes
+AbstractHTML := "The package <span class=\"pkgname\">LieRing</span> contains \
+                 functionality for working with finitely presented Lie rings and the \
+Lazard correspondence.",
+
 Dependencies := rec(
-  GAP := ">=4.8.1",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
+  GAP := ">=4.8",
+  NeededOtherPackages:= [ ],                 
+  SuggestedOtherPackages := [ ],
   ExternalConditions := []
 ),
-
 AvailabilityTest := ReturnTrue,
+Autoload := false,
 
-Keywords := ["GitHub Pages", "GAP"]
+# the banner
+BannerString := "LieRing\n a package for working with Lie rings \n by Serena Cicalò and Willem de Graaf\n",
+Keywords := ["Lie rings","Lazard correspondence"],
+
+AutoDoc := rec(
+    TitlePage := rec(
+        Version := Concatenation( "Version ", ~.Version ),
+        Abstract := """
+            This package provides functions for constructing and working with Lie
+            rings. There are functions for dealing with finitely-presented Lie
+            rings, and for performing the Lazard correspondence. The package also
+            contains a small database of finitely-generated Lie rings satisfying
+            an Engel condition.
+            """,
+        Copyright := "&copyright; 2016 Serena Cicalò and Willem de Graaf",
+    ),
+),
 
 ));
 

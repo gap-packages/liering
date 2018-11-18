@@ -1,0 +1,479 @@
+  
+  [1X2 [33X[0;0YThe functions[133X[101X
+  
+  
+  [1X2.1 [33X[0;0YThe free Lie ring[133X[101X
+  
+  [1X2.1-1 FreeLieRing[101X
+  
+  [33X[1;0Y[29X[2XFreeLieRing[102X( [3XR[103X, [3Xnames[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XFreeLieRing[102X( [3XR[103X, [3Xnames[103X, [3Xdeg[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XFreeLieRing[102X( [3XR[103X, [3Xk[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XFreeLieRing[102X( [3XR[103X, [3Xk[103X, [3Xdeg[103X ) [32X method[133X
+  
+  [33X[0;0YHere  [3XR[103X is a ring, which has to be either the integers, or a field. [3Xnames[103X is
+  a  list of strings, which will be the names of the generators. This function
+  returns  the  free Lie ring over [3XR[103X, with generators named as in [3Xnames [103X. If [3XL[103X
+  denotes the output, then [3XL.i[103X will be the i-th generator. If a third argument
+  [3Xdeg[103X  is  given  then  this  must  be  a list of positive integers. Then each
+  generator  will have a degree equal to the corresponding element of the list
+  [3Xdeg[103X.[133X
+  
+  [33X[0;0YMonomials  in the free Lie ring of the form [22X(a,b)[122X with [22Xa>b[122X are automatically
+  rewritten  as  [22X-(b,a)[122X.  Monomials  of  the form [22X(a,a)[122X are rewritten as zero.
+  There  is  no  other  rewriting done. Therefore, the object returned by this
+  function  is  strictly speaking not the same as the free Lie ring, it rather
+  is the free anticommutative algebra.[133X
+  
+  [33X[0;0YMonomials  in  the  free Lie ring are printed as bracketed expressions. In a
+  printed  element the monomials appear in increasing order; in particular the
+  last monomial is the leading monomial.[133X
+  
+  [33X[0;0YIf  instead  of  the list [3Xnames[103X a positive integer [3Xk[103X is given, then the free
+  Lie  ring  on  that number of generators is returned. Again we can give each
+  generator a degree different from 1 by adding a third argument [3Xdeg[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieRing( Integers, ["a","b"] );[127X[104X
+    [4X[28X<Free algebra over Integers generators: a, b >[128X[104X
+    [4X[25Xgap>[125X [27Xa:= L.1; b:= L.2;[127X[104X
+    [4X[28Xa[128X[104X
+    [4X[28Xb[128X[104X
+    [4X[25Xgap>[125X [27X(a*b)*b+2*a*b;       [127X[104X
+    [4X[28X(2)*(a,b)+(-1)*(b,(a,b))[128X[104X
+  [4X[32X[104X
+  
+  [1X2.1-2 Degree[101X
+  
+  [33X[1;0Y[29X[2XDegree[102X( [3Xf[103X ) [32X operation[133X
+  
+  [33X[0;0YHere [3Xf[103X is an element of a free Lie ring. Its degree is returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieRing( Integers, ["a","b"] );;[127X[104X
+    [4X[25Xgap>[125X [27Xa:= L.1;; b:= L.2;;[127X[104X
+    [4X[25Xgap>[125X [27Xf:=(a*b)*b+2*a*b;[127X[104X
+    [4X[28X(2)*(a,b)+(-1)*(b,(a,b))[128X[104X
+    [4X[25Xgap>[125X [27XDegree(f);[127X[104X
+    [4X[28X3[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.2 [33X[0;0YCreating Lie rings[133X[101X
+  
+  [33X[0;0YThe   package  can  deal  with  finite-dimensional  Lie  rings  given  by  a
+  multiplication  table  (which follow the format for multiplication tables in
+  the  [5XGAP[105X  library),  and  a  list  of moduli. This list has to have the same
+  length  as the number of basis elements of the Lie ring. If the i-th element
+  of  this  list is [22Xm[122X then the additive order of the i-th basis edlement if [22Xm[122X.
+  If [22Xm=0[122X then the additive order is infinite.[133X
+  
+  [1X2.2-1 IsLieRing[101X
+  
+  [33X[1;0Y[29X[2XIsLieRing[102X[32X filter[133X
+  
+  [33X[0;0YThis is the category of finite-dimensional Lie rings.[133X
+  
+  [1X2.2-2 LieRingByStructureConstants[101X
+  
+  [33X[1;0Y[29X[2XLieRingByStructureConstants[102X( [3Xtor[103X, [3XT[103X ) [32X operation[133X
+  
+  [33X[0;0YHere [3XT[103X is a multiplication table, and [3Xtor[103X is a list of moduli. This function
+  returns  the  corresponding Lie ring. In the example below we create the Lie
+  ring with basis elements [22Xx,y,z[122X, with [22X[x,y]=z[122X, [22X3x=6y=3z=0[122X.[133X
+  
+  [33X[0;0YThe  multiplication  table  has  to  be  created using the [5XGAP[105X functions for
+  constructing  multiplication tables of Lie algebras. In particular, we refer
+  to  the  [5XGAP[105X reference manual for descriptions of the functions [2XEmptySCTable[102X
+  ([14XReference: EmptySCTable[114X) [2XSetEntrySCTable[102X ([14XReference: SetEntrySCTable[114X)[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 3, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 2, [1,3] );[127X[104X
+    [4X[25Xgap>[125X [27XLieRingByStructureConstants( [3,6,3], T );[127X[104X
+    [4X[28X<Lie ring with 3 generators>[128X[104X
+  [4X[32X[104X
+  
+  [1X2.2-3 FpLieRing[101X
+  
+  [33X[1;0Y[29X[2XFpLieRing[102X( [3XL[103X, [3XR[103X ) [32X function[133X
+  
+  [33X[0;0YHere  [3XL[103X  is  a  free  Lie  ring defined over the integers, and [3XR[103X is a set of
+  elements  of  [3XL[103X.  This  function  returns  the  Lie  ring given by structure
+  constants, that is isomorphic to [3XL[103X modulo the ideal generated by [3XR[103X.[133X
+  
+  [33X[0;0YIt  is  possible  to  set  the  option  [3Xmaxdeg[103X to a positive value [3Xd[103X. Then a
+  nilpotent  quotient  is computed, i.e., all elements of [3XL[103X of degree strictly
+  greater than [3Xd[103X will be treated as relations.[133X
+  
+  [33X[0;0YThe   algebra   that   is   output   by  this  function  has  an  attribute,
+  [3XCanonicalProjection[103X,  which  is  a function mapping elements of the free Lie
+  ring [3XL[103X to their projections in the output algebra.[133X
+  
+  [33X[0;0YThe  algorithm  behind  this  function  has  been  described  in [CdG07] and
+  [CdG09].[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieRing( Integers, ["x","y"], [1,2] );                   [127X[104X
+    [4X[28X<Free algebra over Integers generators: x, y >[128X[104X
+    [4X[25Xgap>[125X [27Xx:= L.1;; y:= L.2;;[127X[104X
+    [4X[25Xgap>[125X [27XR:= [((y*x)*x)*x-6*(y*x)*y, 3*((((y*x)*x)*x)*x)*x-20*(((y*x)*x)*x)*y ];[127X[104X
+    [4X[28X[ (-1)*(x,(x,(x,y)))+(-6)*(y,(x,y)), [128X[104X
+    [4X[28X  (-3)*(x,(x,(x,(x,(x,y)))))+(-20)*(y,(x,(x,(x,y)))) ][128X[104X
+    [4X[25Xgap>[125X [27XK:= FpLieRing( L, R : maxdeg:= 15 ); time;[127X[104X
+    [4X[28X<Lie ring with 75 generators>[128X[104X
+    [4X[28X944[128X[104X
+    [4X[25Xgap>[125X [27Xf:=CanonicalProjection(K);[127X[104X
+    [4X[28Xfunction( elm ) ... end[128X[104X
+    [4X[25Xgap>[125X [27Xf(R[1]);[127X[104X
+    [4X[28X0[128X[104X
+    [4X[25Xgap>[125X [27Xf(x);[127X[104X
+    [4X[28Xv_1[128X[104X
+  [4X[32X[104X
+  
+  [1X2.2-4 FpLieAlgebra[101X
+  
+  [33X[1;0Y[29X[2XFpLieAlgebra[102X( [3XL[103X, [3XR[103X ) [32X function[133X
+  
+  [33X[0;0YThis  is  similar to [3XFpLieRing[103X, with the difference that the free Lie ring [3XL[103X
+  must  be  defined  over a field. Then the algorithms become a lot faster (in
+  most cases). The result however is a Lie algebra, and not a Lie ring.[133X
+  
+  
+  [1X2.3 [33X[0;0YWorking with Lie rings[133X[101X
+  
+  [1X2.3-1 Basis[101X
+  
+  [33X[1;0Y[29X[2XBasis[102X( [3XL[103X ) [32X operation[133X
+  
+  [33X[0;0YHere [3XL[103X a Lie ring. Its basis is returned.[133X
+  
+  [33X[0;0YWe  note  that  in  [5XLieRing[105X Lie rings have one basis that is computed by the
+  system; one should not try to set a basis.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 3, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 2, [1,3] );[127X[104X
+    [4X[25Xgap>[125X [27XK:= LieRingByStructureConstants( [3,6,3], T );[127X[104X
+    [4X[28X<Lie ring with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XBasis(K); [127X[104X
+    [4X[28XBasis( <Lie ring with 3 generators>, [ v_1, v_2, v_3 ] )[128X[104X
+    [4X[25Xgap>[125X [27XBasisVectors( Basis(K) );[127X[104X
+    [4X[28X[ v_1, v_2, v_3 ][128X[104X
+  [4X[32X[104X
+  
+  [1X2.3-2 StructureConstantsTable[101X
+  
+  [33X[1;0Y[29X[2XStructureConstantsTable[102X( [3XB[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XB[103X  is  the  basis  of  a  Lie  ring.  Its structure constants table is
+  returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 3, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 2, [1,3] );[127X[104X
+    [4X[25Xgap>[125X [27XK:= LieRingByStructureConstants( [3,6,3], T );[127X[104X
+    [4X[28X<Lie ring with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XStructureConstantsTable( Basis(K) );[127X[104X
+    [4X[28X[ [ [ [  ], [  ] ], [ [ 3 ], [ 1 ] ], [ [  ], [  ] ] ], [128X[104X
+    [4X[28X  [ [ [ 3 ], [ -1 ] ], [ [  ], [  ] ], [ [  ], [  ] ] ], [128X[104X
+    [4X[28X  [ [ [  ], [  ] ], [ [  ], [  ] ], [ [  ], [  ] ] ], -1, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [1X2.3-3 Torsion[101X
+  
+  [33X[1;0Y[29X[2XTorsion[102X( [3XB[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XB[103X  is the basis of a Lie ring. The list of torsion moduli of its basis
+  elements is returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 3, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 2, [1,3] );[127X[104X
+    [4X[25Xgap>[125X [27XK:= LieRingByStructureConstants( [3,6,3], T );[127X[104X
+    [4X[28X<Lie ring with 3 generators>[128X[104X
+    [4X[25Xgap>[125X [27XTorsion( Basis(K) );[127X[104X
+    [4X[28X[ 3, 6, 3 ][128X[104X
+  [4X[32X[104X
+  
+  [1X2.3-4 Coefficients[101X
+  
+  [33X[1;0Y[29X[2XCoefficients[102X( [3XB[103X, [3Xelm[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XB[103X  is  the  basis of a Lie ring, and [3Xelm[103X is an element of the same Lie
+  ring. The coefficients of [3Xelm[103X with respect to [3XB[103X are returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieRing( Integers, ["x","y"] );; x:= L.1;; y:= L.2;;[127X[104X
+    [4X[25Xgap>[125X [27Xrr:=[((y*x)*x)*x-6*(y*x)*y, 3*((((y*x)*x)*x)*x)*x-20*(((y*x)*x)*x)*y ];;[127X[104X
+    [4X[25Xgap>[125X [27XK:= FpLieRing( L, rr : maxdeg:= 6 );;[127X[104X
+    [4X[25Xgap>[125X [27XC:=LieCentre(K);[127X[104X
+    [4X[28X<Lie ring with 9 generators>[128X[104X
+    [4X[25Xgap>[125X [27XCoefficients( Basis(K), Basis(C)[6] );[127X[104X
+    [4X[28X[ 5, 5, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XCoefficients( Basis(C), Basis(C)[6] );[127X[104X
+    [4X[28X[ 0, 0, 0, 0, 0, 1, 0, 0, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [1X2.3-5 SubLieRing[101X
+  
+  [33X[1;0Y[29X[2XSubLieRing[102X( [3XL[103X, [3Xgens[103X[, [3Xstring[103X] ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XL[103X  is  a  Lie  ring,  and  [3Xgens[103X a list of elements of [3XL[103X. This function
+  constructs  the subring generated by the elements in [3Xgens[103X. If these elements
+  are  known  to  form a basis of the subalgebra, then as a third argument the
+  string  [3X"basis"[103X can be added. That makes the execution of the function a lot
+  faster.[133X
+  
+  [33X[0;0YThis  function  depends  on  hermite  and  Smith  normal  form computations.
+  Therefore in practice, for bigger inputs, it can be slow.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieRing( Integers, ["x","y"] );;                         [127X[104X
+    [4X[25Xgap>[125X [27Xx:= L.1;; y:= L.2;;[127X[104X
+    [4X[25Xgap>[125X [27Xrr:=[((y*x)*x)*x-6*(y*x)*y, 3*((((y*x)*x)*x)*x)*x-20*(((y*x)*x)*x)*y ];; [127X[104X
+    [4X[25Xgap>[125X [27XK:= FpLieRing( L, rr : maxdeg:= 8 );[127X[104X
+    [4X[28X<Lie ring with 41 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xb:= Basis(K);;[127X[104X
+    [4X[25Xgap>[125X [27XM:= SubLieRing( K, [ b[30], b[40] ] );[127X[104X
+    [4X[28X<Lie ring with 6 generators>[128X[104X
+    [4X[25Xgap>[125X [27XTorsion(Basis(M));[127X[104X
+    [4X[28X[ 3, 6, 6, 12, 360, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XBasis(M)[2];[127X[104X
+    [4X[28X3*v_2+2*v_3+2*v_10+4*v_12+4*v_13+5*v_14+v_15+3*v_17+3*v_18+6*v_20+10*v_22+6*v_[128X[104X
+    [4X[28X24+6*v_25+10*v_26+4*v_27+18*v_28+30*v_29+60*v_30+360*v_31+5040*v_32[128X[104X
+  [4X[32X[104X
+  
+  [1X2.3-6 LieRingIdeal[101X
+  
+  [33X[1;0Y[29X[2XLieRingIdeal[102X( [3XL[103X, [3Xgens[103X[, [3Xstring[103X] ) [32X operation[133X
+  
+  [33X[0;0YThis  is  the  same as [3XSubLieRing[103X except that the output is an ideal (on the
+  level of data structures that is the same as a Lie subring).[133X
+  
+  [1X2.3-7 NaturalHomomorphismByIdeal[101X
+  
+  [33X[1;0Y[29X[2XNaturalHomomorphismByIdeal[102X( [3XL[103X, [3XI[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XL[103X  is  a  Lie  ring, and [3XI[103X an ideal of [3XL[103X. This function constructs the
+  canonical projection of [3XL[103X on the quotient of [3XL[103X by [3XI[103X.[133X
+  
+  [33X[0;0YWe  remark that it is [13Xnot checked[113X whether [3XI[103X is an ideal or not. if [3XI[103X is just
+  a subalgebra, then nothing is guaranteed about the result of this function.[133X
+  
+  [33X[0;0YAlso  this  function depends on Smith normal form computations; therefore it
+  can be slow on bigger inputs.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieRing( Integers, ["x","y"] );;                         [127X[104X
+    [4X[25Xgap>[125X [27Xx:= L.1;; y:= L.2;;[127X[104X
+    [4X[25Xgap>[125X [27Xrr:=[((y*x)*x)*x-6*(y*x)*y, 3*((((y*x)*x)*x)*x)*x-20*(((y*x)*x)*x)*y ];; [127X[104X
+    [4X[25Xgap>[125X [27XK:= FpLieRing( L, rr : maxdeg:= 8 );;[127X[104X
+    [4X[25Xgap>[125X [27Xb:= Basis(K);;[127X[104X
+    [4X[25Xgap>[125X [27XI:= LieRingIdeal( K, [ b[29] ] );[127X[104X
+    [4X[28X<Lie ring with 23 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xf:= NaturalHomomorphismByIdeal( K, I );;[127X[104X
+    [4X[25Xgap>[125X [27XM:= Range(f);[127X[104X
+    [4X[28X<Lie ring with 27 generators>[128X[104X
+    [4X[25Xgap>[125X [27XTorsion(Basis(M));[127X[104X
+    [4X[28X[ 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 6, 12, 12, 12, 120, 720, 10080, 0, 0, 0, [128X[104X
+    [4X[28X  0, 0, 0, 0, 0, 0 ][128X[104X
+    [4X[25Xgap>[125X [27XImage( f, b[30] );[127X[104X
+    [4X[28Xv_16+716*v_17[128X[104X
+    [4X[25Xgap>[125X [27XPreImagesRepresentative( f, Basis(M)[10] );[127X[104X
+    [4X[28X4*v_2+4*v_3+4*v_4+4*v_5+5*v_6+v_7+5*v_8+v_9+5*v_10+v_11+5*v_12+v_13+5*v_14+v_[128X[104X
+    [4X[28X24+v_25+11*v_26+v_29+10*v_30+100*v_31[128X[104X
+  [4X[32X[104X
+  
+  [1X2.3-8 LieLowerCentralSeries[101X
+  
+  [33X[1;0Y[29X[2XLieLowerCentralSeries[102X( [3XL[103X ) [32X operation[133X
+  
+  [33X[0;0YHere [3XL[103X is a Lie ring. Its lower central series is returned.[133X
+  
+  [33X[0;0YThis  repeatedly constructs ideals of [3XL[103X; therefore also this function can be
+  rather slow on bigger inputs.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieRing( Integers, ["x","y"] );; x:= L.1;; y:= L.2;;[127X[104X
+    [4X[25Xgap>[125X [27Xrr:=[((y*x)*x)*x-6*(y*x)*y, 3*((((y*x)*x)*x)*x)*x-20*(((y*x)*x)*x)*y ];;[127X[104X
+    [4X[25Xgap>[125X [27XK:= FpLieRing( L, rr : maxdeg:= 7 );;[127X[104X
+    [4X[25Xgap>[125X [27XLieLowerCentralSeries(K);[127X[104X
+    [4X[28X[ <Lie ring with 26 generators>, <Lie ring with 24 generators>, [128X[104X
+    [4X[28X  <Lie ring with 23 generators>, <Lie ring with 22 generators>, [128X[104X
+    [4X[28X  <Lie ring with 21 generators>, <Lie ring with 19 generators>, [128X[104X
+    [4X[28X  <Lie ring with 16 generators>, <Lie ring with 0 generators> ][128X[104X
+  [4X[32X[104X
+  
+  [1X2.3-9 LieLowerPCentralSeries[101X
+  
+  [33X[1;0Y[29X[2XLieLowerPCentralSeries[102X( [3XL[103X, [3Xp[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XL[103X  is a Lie ring, and [3Xp[103X is a prime. The lower [3Xp[103X-central series of [3XL[103X is
+  returned.  This  is  the  series where the [22XL^k+1[122X is generated by [22X[L,L^k][122X and
+  [22XpL^k[122X. Note that this may not be a finite series, if [22XL[122X is not of exponent [22Xp^n[122X
+  (as  abelian  group).  The  function  does  not check this; if the series is
+  infinite, then it will loop forever.[133X
+  
+  [33X[0;0YThis  repeatedly constructs ideals of [3XL[103X; therefore also this function can be
+  rather slow on bigger inputs.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieRing( Integers, ["x","y"] );; x:= L.1;; y:= L.2;;[127X[104X
+    [4X[25Xgap>[125X [27Xrr:=[((y*x)*x)*x-7*(y*x)*y, 7*((((y*x)*x)*x)*x)*x-49*(((y*x)*x)*x)*y, [127X[104X
+    [4X[25X>[125X [27X7*x, 49*y ];;[127X[104X
+    [4X[25Xgap>[125X [27XK:= FpLieRing( L, rr : maxdeg:= 5 );;[127X[104X
+    [4X[25Xgap>[125X [27XLieLowerPCentralSeries(K,7);[127X[104X
+    [4X[28X[ <Lie ring with 11 generators>, <Lie ring with 10 generators>, [128X[104X
+    [4X[28X  <Lie ring with 8 generators>, <Lie ring with 6 generators>,[128X[104X
+    [4X[28X  <Lie ring with 4 generators>, <Lie ring with 0 generators> ][128X[104X
+  [4X[32X[104X
+  
+  [1X2.3-10 LieCentre[101X
+  
+  [33X[1;0Y[29X[2XLieCentre[102X( [3XL[103X ) [32X operation[133X
+  
+  [33X[0;0YHere [3XL[103X is a Lie ring. Its centre is returned.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieRing( Integers, ["x","y"] );; x:= L.1;; y:= L.2;;[127X[104X
+    [4X[25Xgap>[125X [27Xrr:=[((y*x)*x)*x-6*(y*x)*y, 3*((((y*x)*x)*x)*x)*x-20*(((y*x)*x)*x)*y ];;[127X[104X
+    [4X[25Xgap>[125X [27XK:= FpLieRing( L, rr : maxdeg:= 7 );;[127X[104X
+    [4X[25Xgap>[125X [27XLieCentre(K);[127X[104X
+    [4X[28X<Lie ring with 16 generators>[128X[104X
+    [4X[25Xgap>[125X [27XTorsion( Basis(K) );[127X[104X
+    [4X[28X[ 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 12, 12, 12, 12, 360, 5040, 0, 0, 0, 0, [128X[104X
+    [4X[28X  0, 0, 0, 0 ][128X[104X
+  [4X[32X[104X
+  
+  [1X2.3-11 TensorWithField[101X
+  
+  [33X[1;0Y[29X[2XTensorWithField[102X( [3XL[103X, [3XF[103X ) [32X operation[133X
+  
+  [33X[0;0YHere  [3XL[103X  is  a  Lie  ring,  and  [3XF[103X is a field. This function returns the Lie
+  algebra that is obtained by tensoring [3XL[103X with [3XF[103X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XT:= EmptySCTable( 3, 0, "antisymmetric" );;[127X[104X
+    [4X[25Xgap>[125X [27XSetEntrySCTable( T, 1, 2, [1,3] );[127X[104X
+    [4X[25Xgap>[125X [27XK:= LieRingByStructureConstants( [3,6,3], T );;[127X[104X
+    [4X[25Xgap>[125X [27XTensorWithField( K, GF(3) );[127X[104X
+    [4X[28X<Lie algebra of dimension 3 over GF(3)>[128X[104X
+    [4X[25Xgap>[125X [27XTensorWithField( K, GF(2) );[127X[104X
+    [4X[28X<Lie algebra of dimension 1 over GF(2)>[128X[104X
+    [4X[25Xgap>[125X [27XTensorWithField( K, GF(5) );[127X[104X
+    [4X[28X<Lie algebra over GF(5), with 0 generators>[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.4 [33X[0;0YThe Lazard correspondence[133X[101X
+  
+  [33X[0;0YBy the Lazard correspondence we can put a Lie ring structure on a [22Xp[122X-group of
+  class  [22X<p[122X.  Conversely,  we  can define a group structure on a nilpotent Lie
+  ring  of  order  [22Xp^n[122X  and class [22X<p[122X. The package contains functions for doing
+  this  effectively.  However, we do not work with a single object having both
+  the  structure  of a [22Xp[122X-group and a Lie ring. Rather we define two objects, a
+  [22Xp[122X-group  and a Lie ring, along with bijections between the two. Our programs
+  use  the  BCH-formula  and  its  inverses,  that have been stored in a file,
+  truncated  at  weight  14.  This means that currently the package is able to
+  deal with groups and algebras up to class 14. The underlying algorithms have
+  been described in [CdGVL11][133X
+  
+  [1X2.4-1 PGroupToLieRing[101X
+  
+  [33X[1;0Y[29X[2XPGroupToLieRing[102X( [3XG[103X ) [32X attribute[133X
+  
+  [33X[0;0YHere  [3XG[103X  is  a [22Xp[122X-group of class [22X<p[122X. This function returns a record with four
+  components: [3Xpgroup[103X (the group [3XG[103X), [3Xliering[103X (the corresponding Lie ring), [3XGtoL[103X
+  (a function mapping elements of the group to elements of the Lie ring), [3XLtoG[103X
+  (a function mapping elements of the Lie ring to elements of the group).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XF := FreeGroup(IsSyllableWordsFamily,"a","b","c","d", "e", "f", "g");;[127X[104X
+    [4X[25Xgap>[125X [27Xa := F.1;; b := F.2;; c := F.3;; d := F.4;; e := F.5;; f := F.6;; g:=F.7;;[127X[104X
+    [4X[25Xgap>[125X [27Xrels := [ a^13, b^13/g, c^13, d^13, e^13, f^13, g^13,  [127X[104X
+    [4X[25X>[125X [27XComm(b,a)/c, Comm(c,a)/d, Comm(d,a)/e, Comm(e,a)/f, Comm(f,a), Comm(g,a),[127X[104X
+    [4X[25X>[125X [27XComm(c,b)/(g^11), Comm(d,b)/g, Comm(e,b)/g, Comm(g,b), Comm(d,c)/(g^12),[127X[104X
+    [4X[25X>[125X [27XComm(e,c), Comm(f,c), Comm(g,c), Comm(e,d), Comm(f,d), Comm(g,d), Comm(f,e), [127X[104X
+    [4X[25X>[125X [27XComm(g,e), Comm(g,f)];;[127X[104X
+    [4X[25Xgap>[125X [27XG := PcGroupFpGroup( F/rels );[127X[104X
+    [4X[28X<pc group of size 62748517 with 7 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xr:= PGroupToLieRing(G);[127X[104X
+    [4X[28Xrec( pgroup := <pc group of size 62748517 with 7 generators>, [128X[104X
+    [4X[28Xliering := <Lie ring with 6 generators>, [128X[104X
+    [4X[28XGtoL := function( g0 ) ... end, LtoG := function( x0 ) ... end )[128X[104X
+    [4X[25Xgap>[125X [27Xf:= r.GtoL; h:= r.LtoG;[127X[104X
+    [4X[28Xfunction( g0 ) ... end[128X[104X
+    [4X[28Xfunction( x0 ) ... end[128X[104X
+    [4X[25Xgap>[125X [27XL:= r.liering;[127X[104X
+    [4X[28X<Lie ring with 6 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xb:= Basis(L);[127X[104X
+    [4X[28XBasis( <Lie ring with 6 generators>, [ v_1, v_2, v_3, v_4, v_5, v_6 ] )[128X[104X
+    [4X[25Xgap>[125X [27Xh(b[1]);[127X[104X
+    [4X[28Xa^12*c*d^5*e^3*f^8*g^7[128X[104X
+    [4X[25Xgap>[125X [27Xf(h(b[1]));[127X[104X
+    [4X[28Xv_1[128X[104X
+  [4X[32X[104X
+  
+  [1X2.4-2 LieRingToPGroup[101X
+  
+  [33X[1;0Y[29X[2XLieRingToPGroup[102X( [3XL[103X ) [32X attribute[133X
+  
+  [33X[0;0YHere  [3XL[103X  is  a  nilpotent  Lie ring of class [22X<p[122X and order [22Xp^n[122X. This function
+  returns  a record with four components: [3Xpgroup[103X (the [22Xp[122X-group corresponding to
+  [3XL[103X), [3Xliering[103X (the Lie ring [3XL[103X), [3XGtoL[103X (a function mapping elements of the group
+  to  elements  of the Lie ring), [3XLtoG[103X (a function mapping elements of the Lie
+  ring to elements of the group).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= FreeLieRing( Integers, ["a","b","c"] );; [127X[104X
+    [4X[25Xgap>[125X [27Xa:= L.1;; b:= L.2;; c:= L.3;;[127X[104X
+    [4X[25Xgap>[125X [27Xrels:= [ (b*a)*b, c*a, c*b-(b*a)*a, 7^2*a, 7*b-((b*a)*a)*a, [127X[104X
+    [4X[25X>[125X [27X7*c-((b*a)*a)*a];;[127X[104X
+    [4X[25Xgap>[125X [27XK:= FpLieRing( L, rels );[127X[104X
+    [4X[28X<Lie ring with 5 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xr:= LieRingToPGroup(K);[127X[104X
+    [4X[28Xrec( pgroup := <pc group of size 823543 with 7 generators>, [128X[104X
+    [4X[28Xliering := <Lie ring with 5 generators>, [128X[104X
+    [4X[28XLtoG := function( x0 ) ... end, GtoL := function( g0 ) ... end )[128X[104X
+    [4X[25Xgap>[125X [27XG:= r.pgroup;; f:= r.LtoG;; h:= r.GtoL;;[127X[104X
+    [4X[25Xgap>[125X [27Xu:= 5*Basis(K)[2]+9*Basis(K)[5];[127X[104X
+    [4X[28X5*v_2+9*v_5[128X[104X
+    [4X[25Xgap>[125X [27Xf(u);[127X[104X
+    [4X[28Xf3^2*f4^2*f5^6*f7^3[128X[104X
+    [4X[25Xgap>[125X [27Xh(f(u));[127X[104X
+    [4X[28X5*v_2+9*v_5[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X2.5 [33X[0;0YThe database of [22Xn[122X[101X[1X-Engel Lie rings[133X[101X
+  
+  [33X[0;0YA  Lie ring [22XL[122X is said to satisfy the [22Xn[122X-Engel condition if for all [22Xx,y ∈ L[122X we
+  have  [22X(ad x)^n (y) = 0[122X. The package [5XLieRing[105X contains a small database of Lie
+  rings  that  satisfy  an [22Xn[122X-Engel condition. They have been computed with the
+  algorithms described in [CdG07] and [CdG09].[133X
+  
+  [33X[0;0YCurrently  the  database  contains  the "freeest" (or "largest") [22Xn[122X-Engel Lie
+  rings with [22Xk[122X generators for [22X(n,k) = (3,2), (3,3), (3,4), (4,2), (4,3)[122X.[133X
+  
+  [1X2.5-1 SmallNEngelLieRing[101X
+  
+  [33X[1;0Y[29X[2XSmallNEngelLieRing[102X( [3Xn[103X, [3Xk[103X ) [32X operation[133X
+  
+  [33X[0;0YThis  returns the biggest [3Xn[103X-Engel Lie ring with [3Xk[103X generators, for the values
+  of [3Xn,k[103X indicated above. For other values an error is raised.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XL:= SmallNEngelLieRing( 4, 3 );[127X[104X
+    [4X[28X<Lie ring with 133 generators>[128X[104X
+    [4X[25Xgap>[125X [27Xx:= 10*Basis(L)[1]+7*Basis(L)[10]+19*Basis(L)[89];[127X[104X
+    [4X[28X7*v_10+19*v_89[128X[104X
+    [4X[25Xgap>[125X [27XForAll( Basis(L), y -> IsZero( x*(x*(x*(x*y))) ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XK:= TensorWithField( L, GF(3) );[127X[104X
+    [4X[28X<Lie algebra of dimension 83 over GF(3)>[128X[104X
+    [4X[25Xgap>[125X [27Xx:= Random(K);;[127X[104X
+    [4X[25Xgap>[125X [27XForAll( Basis(K), y -> IsZero( x*(x*(x*(x*y))) ) );[127X[104X
+    [4X[28Xtrue[128X[104X
+  [4X[32X[104X
+  
