@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 
 <!DOCTYPE Book SYSTEM "gapdoc.dtd"
@@ -9,54 +9,7 @@
 
 <Book Name="LieRing">
 
-<TitlePage>
-  <Title>&LieRing;</Title>
-  <Subtitle>Lie Rings</Subtitle>
-  <Version>Version 2.3</Version>
-
-<Author>
-  Serena Cical&#242;
-  <Email>cicalo@science.unitn.it</Email>
- <Address>
-    	    Dipartimento di Matematica e Informatica<Br/>
-            Via Ospedale, 72<Br/>
-            09124 Cagliari<Br/>
-            Italy<Br/>
-       </Address> 
-   </Author>
-
-
-<Author>
-  Willem de Graaf
-  <Email>degraaf@science.unitn.it</Email>
-  <Homepage>http://www.science.unitn.it/~degraaf/</Homepage>
-          <Address>
-    	    Dipartimento di Matematica<Br/>
-Via Sommarive 14<Br/>
-I-38050 Povo (Trento)<Br/>
-Italy<Br/>
-       </Address> 
-  </Author>
-
-
-
-  <Date>November 2016</Date>
-
-
-
-<Abstract>
-This package provides functions for constructing and working 
-with Lie rings. There are functions for dealing with finitely-presented Lie
-rings, and for performing the Lazard correspondence. The package also contains
-a small database of finitely-generated Lie rings satisfying an Engel condition.
-</Abstract>
-
-<Copyright>
-  &copyright; 2016 Serena Cical&#242; and Willem de Graaf 
-</Copyright>
-  
-
-</TitlePage>
+<#Include SYSTEM "title.xml">
 
 <TableOfContents/>
 

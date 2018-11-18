@@ -10,7 +10,7 @@
 
 SetPackageInfo( rec(
 PackageName := "LieRing",
-Subtitle := "finitely presented Lie rings",        
+Subtitle := "Computing with finitely presented Lie rings",        
 Version := "2.3",
 Date := "01/11/2016",
 ArchiveURL := Concatenation("http://www.science.unitn.it/~degraaf/liering/liering-",
@@ -18,13 +18,13 @@ ArchiveURL := Concatenation("http://www.science.unitn.it/~degraaf/liering/lierin
 ArchiveFormats := ".tar.gz",
 Persons := [
     rec( 
-      LastName      := "Cicalo'",
+      LastName      := "Cicalò",
       FirstNames    := "Serena",
       IsAuthor      := true,
       IsMaintainer  := true,
       Email         := "cicalo@science.unitn.it",
       PostalAddress := Concatenation( [
-                     "Serena Cicalo'\n",
+                     "Serena Cicalò\n",
                          "Dipartimento di Matematica e Informatica\n",
                          "Via Ospedale 72\n",
                          "Italy" ]),
@@ -53,7 +53,7 @@ PackageDoc := rec(
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
   SixFile   := "doc/manual.six",
-  LongTitle := "Computing with Lie rings",
+  LongTitle := "Computing with finitely presented Lie rings",
   Autoload  := true
 ),
 README_URL := 
@@ -74,8 +74,23 @@ AvailabilityTest := ReturnTrue,
 Autoload := false,
 
 # the banner
-BannerString := "LieRing\n a package for working with Lie rings \n by Serena Cicalo' and Willem de Graaf\n",
-Keywords := ["Lie rings","Lazard correspondence"]
+BannerString := "LieRing\n a package for working with Lie rings \n by Serena Cicalò and Willem de Graaf\n",
+Keywords := ["Lie rings","Lazard correspondence"],
+
+AutoDoc := rec(
+    TitlePage := rec(
+        Version := Concatenation( "Version ", ~.Version ),
+        Abstract := """
+            This package provides functions for constructing and working with Lie
+            rings. There are functions for dealing with finitely-presented Lie
+            rings, and for performing the Lazard correspondence. The package also
+            contains a small database of finitely-generated Lie rings satisfying
+            an Engel condition.
+            """,
+        Copyright := "&copyright; 2016 Serena Cicalò and Willem de Graaf",
+    ),
+),
+
 ));
 
 
