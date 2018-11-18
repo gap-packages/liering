@@ -11,7 +11,7 @@
 SetPackageInfo( rec(
 PackageName := "LieRing",
 Subtitle := "Computing with finitely presented Lie rings",        
-Version := "2.3",
+Version := "2.3dev",
 Date := "01/11/2016", # this is in dd/mm/yyyy format
 
 Persons := [
