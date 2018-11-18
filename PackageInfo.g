@@ -75,9 +75,9 @@ AbstractHTML := "The package <span class=\"pkgname\">LieRing</span> contains \
 Lazard correspondence.",
 
 Dependencies := rec(
-  GAP := ">=4.4",
+  GAP := ">=4.8",
   NeededOtherPackages:= [ ],                 
-  SuggestedOtherPackages := [ ["GAPDoc", ">= 1.0"] ],
+  SuggestedOtherPackages := [ ],
   ExternalConditions := []
 ),
 AvailabilityTest := ReturnTrue,
