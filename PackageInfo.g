@@ -12,10 +12,8 @@ SetPackageInfo( rec(
 PackageName := "LieRing",
 Subtitle := "Computing with finitely presented Lie rings",        
 Version := "2.3",
-Date := "01/11/2016",
-ArchiveURL := Concatenation("http://www.science.unitn.it/~degraaf/liering/liering-",
-                            ~.Version),
-ArchiveFormats := ".tar.gz",
+Date := "01/11/2016", # this is in dd/mm/yyyy format
+
 Persons := [
     rec( 
       LastName      := "Cicalò",
@@ -47,6 +45,21 @@ Persons := [
 Status := "accepted",
 CommunicatedBy := "Max Neunhoeffer (Cologne)",
 AcceptDate := "12/2013",
+
+PackageWWWHome  := "https://gap-packages.github.io/liering/",
+README_URL      := Concatenation( ~.PackageWWWHome, "README.md" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+SourceRepository := rec(
+    Type := "git",
+    URL := "https://github.com/gap-packages/liering",
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/liering-", ~.Version ),
+ArchiveFormats := ".tar.gz",
+
+
 PackageDoc := rec(
   BookName  := "LieRing",
   ArchiveURLSubset := ["doc"],
@@ -56,14 +69,11 @@ PackageDoc := rec(
   LongTitle := "Computing with finitely presented Lie rings",
   Autoload  := true
 ),
-README_URL := 
-  "http://www.science.unitn.it/~degraaf/liering/README.md",
-PackageInfoURL := 
-  "http://www.science.unitn.it/~degraaf/liering/PackageInfo.g",
+
 AbstractHTML := "The package <span class=\"pkgname\">LieRing</span> contains \
                  functionality for working with finitely presented Lie rings and the \
 Lazard correspondence.",
-PackageWWWHome := "http://www.science.unitn.it/~degraaf/liering.html",
+
 Dependencies := rec(
   GAP := ">=4.4",
   NeededOtherPackages:= [ ],                 
