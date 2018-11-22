@@ -392,9 +392,9 @@ LRPrivateFunctions.addElm_RedSet:= function( fam, f, G, lms )
           G:= Filtered( G, x -> IsBound(x) );
           lms:= Filtered( lms, x -> IsBound(x) );
           pos:= PositionSorted( lms, n[1] );
-          COPY_LIST_ENTRIES(G,pos,1,G,pos+1,1,Length(G)-pos+1);
+          CopyListEntries(G,pos,1,G,pos+1,1,Length(G)-pos+1);
           G[pos]:= h;
-          COPY_LIST_ENTRIES(lms,pos,1,lms,pos+1,1,Length(lms)-pos+1);
+          CopyListEntries(lms,pos,1,lms,pos+1,1,Length(lms)-pos+1);
           lms[pos]:= n[1];
        fi;
     od;

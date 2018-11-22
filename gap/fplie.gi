@@ -196,7 +196,7 @@ LRPrivateFunctions.dir_monmult:= function( F, x, y )
         for i in [pos..Length(o)] do o[ mons[i].no ]:= o[ mons[i].no ]+1; od;
         Add( o, pos );
 
-        COPY_LIST_ENTRIES(mons,pos,1,mons,pos+1,1,Length(mons)-pos+1);
+        CopyListEntries(mons,pos,1,mons,pos+1,1,Length(mons)-pos+1);
         mons[pos]:= p;
 
         F!.monomials:= mons;
@@ -226,7 +226,7 @@ LRPrivateFunctions.dir_monmult:= function( F, x, y )
        for i in [pos..Length(o)] do o[ mons[i].no ]:= o[ mons[i].no ]+1; od;
        Add( o, pos );
 
-       COPY_LIST_ENTRIES(mons,pos,1,mons,pos+1,1,Length(mons)-pos+1);
+       CopyListEntries(mons,pos,1,mons,pos+1,1,Length(mons)-pos+1);
        mons[pos]:= p;
 
        F!.monomials:= mons;
@@ -365,7 +365,7 @@ LRPrivateFunctions.special_mult:= function( F, x1, f1, x2, f2, x3, f3 )
            for i in [pos..Length(o)] do o[ mons[i].no ]:= o[ mons[i].no ]+1; od;
            Add( o, pos );
 
-           COPY_LIST_ENTRIES(mons,pos,1,mons,pos+1,1,Length(mons)-pos+1);
+           CopyListEntries(mons,pos,1,mons,pos+1,1,Length(mons)-pos+1);
            mons[pos]:= p;
 
            F!.monomials:= mons;
@@ -935,9 +935,9 @@ LRPrivateFunctions.AddElmRedSet:= function( fam, f, G, lms )
           G:= Filtered( G, x -> IsBound(x) );
           lms:= Filtered( lms, x -> IsBound(x) );
           pos:= PositionSorted( lms, n[1] );
-          COPY_LIST_ENTRIES(G,pos,1,G,pos+1,1,Length(G)-pos+1);
+          CopyListEntries(G,pos,1,G,pos+1,1,Length(G)-pos+1);
           G[pos]:= h;
-          COPY_LIST_ENTRIES(lms,pos,1,lms,pos+1,1,Length(lms)-pos+1);
+          CopyListEntries(lms,pos,1,lms,pos+1,1,Length(lms)-pos+1);
           lms[pos]:= n[1];
        fi;
     od;
