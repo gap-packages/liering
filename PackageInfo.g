@@ -41,7 +41,14 @@ Persons := [
   WWWHome := "http://www.science.unitn.it/~degraaf",
   Place := "Trento",
   Institution := "Dipartimento di Matematica"
-  )
+  ),
+  rec(
+    LastName      := "GAP Team",
+    FirstNames    := "The",
+    IsAuthor      := false,
+    IsMaintainer  := true,
+    Email         := "support@gap-system.org",
+  ),
 ],
 Status := "accepted",
 CommunicatedBy := "Max Neunhoeffer (Cologne)",
