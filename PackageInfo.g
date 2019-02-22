@@ -7,15 +7,15 @@
 # terms of the GNU General Public License as published by the Free Software Foundation; 
 # either version 2 of the License, or (at your option) any later version. 
 
-
 SetPackageInfo( rec(
 PackageName := "LieRing",
-Subtitle := "Computing with finitely presented Lie rings",        
-Version := "2.3",
-Date := "01/11/2016", # this is in dd/mm/yyyy format
+Subtitle := "Computing with finitely presented Lie rings",
+Version := "2.4",
+Date := "22/02/2019", # dd/mm/yyyy format
+License := "GPL-2.0-or-later",
 
 Persons := [
-    rec( 
+    rec(
       LastName      := "Cicalò",
       FirstNames    := "Serena",
       IsAuthor      := true,
@@ -40,7 +40,14 @@ Persons := [
   WWWHome := "http://www.science.unitn.it/~degraaf",
   Place := "Trento",
   Institution := "Dipartimento di Matematica"
-  )
+  ),
+  rec(
+    LastName      := "GAP Team",
+    FirstNames    := "The",
+    IsAuthor      := false,
+    IsMaintainer  := true,
+    Email         := "support@gap-system.org",
+  ),
 ],
 Status := "accepted",
 CommunicatedBy := "Max Neunhoeffer (Cologne)",
@@ -76,7 +83,7 @@ Lazard correspondence.",
 
 Dependencies := rec(
   GAP := ">=4.8",
-  NeededOtherPackages:= [ ],                 
+  NeededOtherPackages:= [ ],
   SuggestedOtherPackages := [ ],
   ExternalConditions := []
 ),

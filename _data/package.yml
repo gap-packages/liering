@@ -1,6 +1,6 @@
 name: LieRing
-version: 2.3
-date: 2016-11-01
+version: 2.4
+date: 2019-02-22
 description: |
     Computing with finitely presented Lie rings
 
@@ -15,6 +15,8 @@ maintainers:
       url: mailto:cicalo@science.unitn.it
     - name: Willem Adriaan de Graaf
       url: http://www.science.unitn.it/~degraaf
+    - name: The GAP Team
+      url: mailto:support@gap-system.org
 
 GAP: ">=4.8"
 
@@ -24,7 +26,7 @@ packageinfo: https://gap-packages.github.io/liering/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/liering/releases/download/v2.3/liering-2.3.tar.gz
+      url: https://github.com/gap-packages/liering/releases/download/v2.4/liering-2.4.tar.gz
 
 abstract: |
     The package <span class="pkgname">LieRing</span> contains                  functionality for working with finitely presented Lie rings and the Lazard correspondence.
@@ -36,24 +38,27 @@ keywords: |
     Lie rings, Lazard correspondence.
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>CG16</span>]   <b class='BibAuthor'>Cicalò, S. and de Graaf, W. A.</b>,
+    [<span class='BibKey'>CGT19</span>]   <b class='BibAuthor'>Cicalò, S., de Graaf, W. A. and GAP Team, T.</b>,
      <i class='BibTitle'>LieRing, Computing with finitely presented Lie rings,
-             Version 2.3</i>
-     (<span class='BibYear'>2016</span>)<br />
+             Version 2.4</i>
+     (<span class='BibYear'>2019</span>)<br />
     (<span class='BibNote'>Refereed GAP package</span>),
     <span class='BibHowpublished'><a href="https://gap-packages.github.io/liering/">https://gap-packages.github.io/liering/</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ LieRing2.3,
-      author =           {Cical{\a`o}, S. and de Graaf, W. A.},
-      title =            {{LieRing}, Computing with finitely presented Lie rings, {V}ersion 2.3},
-      month =            {Nov},
-      year =             {2016},
+    @misc{ LieRing2.4,
+      author =           {Cical{\a`o}, S. and de Graaf, W. A. and GAP Team, T.},
+      title =            {{LieRing},   Computing  with  finitely  presented  Lie
+                          rings, {V}ersion 2.4},
+      month =            {Feb},
+      year =             {2019},
       note =             {Refereed GAP package},
-      howpublished =     {\href {https://gap-packages.github.io/liering/} {\texttt{https://gap-packages.github.io/}\discretionary {}{}{}\texttt{liering/}}},
+      howpublished =     {\href        {https://gap-packages.github.io/liering/}
+                          {\texttt{https://gap-packages.github.io/}\discretionary
+                          {}{}{}\texttt{liering/}}},
       keywords =         {Lie rings; Lazard correspondence},
-      printedkey =       {CG16}
+      printedkey =       {CGT19}
     }
 
