@@ -159,8 +159,8 @@ gap> TensorWithField( K, GF(3) );
 <Lie algebra of dimension 3 over GF(3)>
 gap> TensorWithField( K, GF(2) );
 <Lie algebra of dimension 1 over GF(2)>
-gap> TensorWithField( K, GF(5) );
-<Lie algebra of dimension 0 over GF(5)>
+gap> Dimension( TensorWithField( K, GF(5) ) );
+0
 
 # doc/manual.xml:561-586
 gap> F := FreeGroup(IsSyllableWordsFamily,"a","b","c","d", "e", "f", "g");;
