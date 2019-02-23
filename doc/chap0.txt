@@ -6,10 +6,10 @@
                  [1X Computing with finitely presented Lie rings [101X
   
   
-                                  Version 2.4
+                                 Version 2.4.1
   
   
-                                22 February 2019
+                                23 February 2019
   
   
                                  Serena Cicalò

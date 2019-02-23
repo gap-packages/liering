@@ -120,9 +120,8 @@
     [4X[25Xgap>[125X [27XR:= [((y*x)*x)*x-6*(y*x)*y, 3*((((y*x)*x)*x)*x)*x-20*(((y*x)*x)*x)*y ];[127X[104X
     [4X[28X[ (-1)*(x,(x,(x,y)))+(-6)*(y,(x,y)), [128X[104X
     [4X[28X  (-3)*(x,(x,(x,(x,(x,y)))))+(-20)*(y,(x,(x,(x,y)))) ][128X[104X
-    [4X[25Xgap>[125X [27XK:= FpLieRing( L, R : maxdeg:= 15 ); time;[127X[104X
+    [4X[25Xgap>[125X [27XK:= FpLieRing( L, R : maxdeg:= 15 );[127X[104X
     [4X[28X<Lie ring with 75 generators>[128X[104X
-    [4X[28X944[128X[104X
     [4X[25Xgap>[125X [27Xf:=CanonicalProjection(K);[127X[104X
     [4X[28Xfunction( elm ) ... end[128X[104X
     [4X[25Xgap>[125X [27Xf(R[1]);[127X[104X
@@ -325,7 +324,7 @@
     [4X[25Xgap>[125X [27XK:= FpLieRing( L, rr : maxdeg:= 5 );;[127X[104X
     [4X[25Xgap>[125X [27XLieLowerPCentralSeries(K,7);[127X[104X
     [4X[28X[ <Lie ring with 11 generators>, <Lie ring with 10 generators>, [128X[104X
-    [4X[28X  <Lie ring with 8 generators>, <Lie ring with 6 generators>,[128X[104X
+    [4X[28X  <Lie ring with 8 generators>, <Lie ring with 6 generators>, [128X[104X
     [4X[28X  <Lie ring with 4 generators>, <Lie ring with 0 generators> ][128X[104X
   [4X[32X[104X
   
@@ -361,8 +360,8 @@
     [4X[28X<Lie algebra of dimension 3 over GF(3)>[128X[104X
     [4X[25Xgap>[125X [27XTensorWithField( K, GF(2) );[127X[104X
     [4X[28X<Lie algebra of dimension 1 over GF(2)>[128X[104X
-    [4X[25Xgap>[125X [27XTensorWithField( K, GF(5) );[127X[104X
-    [4X[28X<Lie algebra over GF(5), with 0 generators>[128X[104X
+    [4X[25Xgap>[125X [27XDimension( TensorWithField( K, GF(5) ) );[127X[104X
+    [4X[28X0[128X[104X
   [4X[32X[104X
   
   
@@ -399,9 +398,9 @@
     [4X[25Xgap>[125X [27XG := PcGroupFpGroup( F/rels );[127X[104X
     [4X[28X<pc group of size 62748517 with 7 generators>[128X[104X
     [4X[25Xgap>[125X [27Xr:= PGroupToLieRing(G);[127X[104X
-    [4X[28Xrec( pgroup := <pc group of size 62748517 with 7 generators>, [128X[104X
-    [4X[28Xliering := <Lie ring with 6 generators>, [128X[104X
-    [4X[28XGtoL := function( g0 ) ... end, LtoG := function( x0 ) ... end )[128X[104X
+    [4X[28Xrec( GtoL := function( g0 ) ... end, LtoG := function( x0 ) ... end, [128X[104X
+    [4X[28X  liering := <Lie ring with 6 generators>, [128X[104X
+    [4X[28X  pgroup := <pc group of size 62748517 with 7 generators> )[128X[104X
     [4X[25Xgap>[125X [27Xf:= r.GtoL; h:= r.LtoG;[127X[104X
     [4X[28Xfunction( g0 ) ... end[128X[104X
     [4X[28Xfunction( x0 ) ... end[128X[104X
@@ -433,9 +432,9 @@
     [4X[25Xgap>[125X [27XK:= FpLieRing( L, rels );[127X[104X
     [4X[28X<Lie ring with 5 generators>[128X[104X
     [4X[25Xgap>[125X [27Xr:= LieRingToPGroup(K);[127X[104X
-    [4X[28Xrec( pgroup := <pc group of size 823543 with 7 generators>, [128X[104X
-    [4X[28Xliering := <Lie ring with 5 generators>, [128X[104X
-    [4X[28XLtoG := function( x0 ) ... end, GtoL := function( g0 ) ... end )[128X[104X
+    [4X[28Xrec( GtoL := function( g0 ) ... end, LtoG := function( x0 ) ... end, [128X[104X
+    [4X[28X  liering := <Lie ring with 5 generators>, [128X[104X
+    [4X[28X  pgroup := <pc group of size 823543 with 7 generators> )[128X[104X
     [4X[25Xgap>[125X [27XG:= r.pgroup;; f:= r.LtoG;; h:= r.GtoL;;[127X[104X
     [4X[25Xgap>[125X [27Xu:= 5*Basis(K)[2]+9*Basis(K)[5];[127X[104X
     [4X[28X5*v_2+9*v_5[128X[104X

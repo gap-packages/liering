@@ -10,8 +10,8 @@
 SetPackageInfo( rec(
 PackageName := "LieRing",
 Subtitle := "Computing with finitely presented Lie rings",
-Version := "2.4",
-Date := "22/02/2019", # dd/mm/yyyy format
+Version := "2.4.1",
+Date := "23/02/2019", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
@@ -88,10 +88,10 @@ Dependencies := rec(
   ExternalConditions := []
 ),
 AvailabilityTest := ReturnTrue,
-Autoload := false,
 
 # the banner
 BannerString := "LieRing\n a package for working with Lie rings \n by Serena Cicalò and Willem de Graaf\n",
+TestFile := "tst/testall.g",
 Keywords := ["Lie rings","Lazard correspondence"],
 
 AutoDoc := rec(

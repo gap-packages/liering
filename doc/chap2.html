@@ -165,9 +165,8 @@ b
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">R:= [((y*x)*x)*x-6*(y*x)*y, 3*((((y*x)*x)*x)*x)*x-20*(((y*x)*x)*x)*y ];</span>
 [ (-1)*(x,(x,(x,y)))+(-6)*(y,(x,y)), 
   (-3)*(x,(x,(x,(x,(x,y)))))+(-20)*(y,(x,(x,(x,y)))) ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">K:= FpLieRing( L, R : maxdeg:= 15 ); time;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">K:= FpLieRing( L, R : maxdeg:= 15 );</span>
 &lt;Lie ring with 75 generators&gt;
-944
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:=CanonicalProjection(K);</span>
 function( elm ) ... end
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f(R[1]);</span>
@@ -368,7 +367,7 @@ v_16+716*v_17
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">K:= FpLieRing( L, rr : maxdeg:= 5 );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LieLowerPCentralSeries(K,7);</span>
 [ &lt;Lie ring with 11 generators&gt;, &lt;Lie ring with 10 generators&gt;, 
-  &lt;Lie ring with 8 generators&gt;, &lt;Lie ring with 6 generators&gt;,
+  &lt;Lie ring with 8 generators&gt;, &lt;Lie ring with 6 generators&gt;, 
   &lt;Lie ring with 4 generators&gt;, &lt;Lie ring with 0 generators&gt; ]
 </pre></div>
 
@@ -407,8 +406,8 @@ v_16+716*v_17
 &lt;Lie algebra of dimension 3 over GF(3)&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TensorWithField( K, GF(2) );</span>
 &lt;Lie algebra of dimension 1 over GF(2)&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">TensorWithField( K, GF(5) );</span>
-&lt;Lie algebra over GF(5), with 0 generators&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Dimension( TensorWithField( K, GF(5) ) );</span>
+0
 </pre></div>
 
 <p><a id="X7994DA6587ABDA2D" name="X7994DA6587ABDA2D"></a></p>
@@ -436,9 +435,9 @@ v_16+716*v_17
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G := PcGroupFpGroup( F/rels );</span>
 &lt;pc group of size 62748517 with 7 generators&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r:= PGroupToLieRing(G);</span>
-rec( pgroup := &lt;pc group of size 62748517 with 7 generators&gt;, 
-liering := &lt;Lie ring with 6 generators&gt;, 
-GtoL := function( g0 ) ... end, LtoG := function( x0 ) ... end )
+rec( GtoL := function( g0 ) ... end, LtoG := function( x0 ) ... end, 
+  liering := &lt;Lie ring with 6 generators&gt;, 
+  pgroup := &lt;pc group of size 62748517 with 7 generators&gt; )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f:= r.GtoL; h:= r.LtoG;</span>
 function( g0 ) ... end
 function( x0 ) ... end
@@ -468,9 +467,9 @@ v_1
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">K:= FpLieRing( L, rels );</span>
 &lt;Lie ring with 5 generators&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r:= LieRingToPGroup(K);</span>
-rec( pgroup := &lt;pc group of size 823543 with 7 generators&gt;, 
-liering := &lt;Lie ring with 5 generators&gt;, 
-LtoG := function( x0 ) ... end, GtoL := function( g0 ) ... end )
+rec( GtoL := function( g0 ) ... end, LtoG := function( x0 ) ... end, 
+  liering := &lt;Lie ring with 5 generators&gt;, 
+  pgroup := &lt;pc group of size 823543 with 7 generators&gt; )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G:= r.pgroup;; f:= r.LtoG;; h:= r.GtoL;;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">u:= 5*Basis(K)[2]+9*Basis(K)[5];</span>
 5*v_2+9*v_5
