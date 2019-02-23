@@ -88,10 +88,10 @@ Dependencies := rec(
   ExternalConditions := []
 ),
 AvailabilityTest := ReturnTrue,
-Autoload := false,
 
 # the banner
 BannerString := "LieRing\n a package for working with Lie rings \n by Serena Cicalò and Willem de Graaf\n",
+TestFile := "tst/testall.g",
 Keywords := ["Lie rings","Lazard correspondence"],
 
 AutoDoc := rec(

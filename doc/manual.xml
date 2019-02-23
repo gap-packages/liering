@@ -273,9 +273,8 @@ gap> x:= L.1;; y:= L.2;;
 gap> R:= [((y*x)*x)*x-6*(y*x)*y, 3*((((y*x)*x)*x)*x)*x-20*(((y*x)*x)*x)*y ];
 [ (-1)*(x,(x,(x,y)))+(-6)*(y,(x,y)), 
   (-3)*(x,(x,(x,(x,(x,y)))))+(-20)*(y,(x,(x,(x,y)))) ]
-gap> K:= FpLieRing( L, R : maxdeg:= 15 ); time;
+gap> K:= FpLieRing( L, R : maxdeg:= 15 );
 &lt;Lie ring with 75 generators>
-944
 gap> f:=CanonicalProjection(K);
 function( elm ) ... end
 gap> f(R[1]);
@@ -488,7 +487,7 @@ gap> rr:=[((y*x)*x)*x-7*(y*x)*y, 7*((((y*x)*x)*x)*x)*x-49*(((y*x)*x)*x)*y,
 gap> K:= FpLieRing( L, rr : maxdeg:= 5 );;
 gap> LieLowerPCentralSeries(K,7);
 [ &lt;Lie ring with 11 generators>, &lt;Lie ring with 10 generators>, 
-  &lt;Lie ring with 8 generators>, &lt;Lie ring with 6 generators>,
+  &lt;Lie ring with 8 generators>, &lt;Lie ring with 6 generators>, 
   &lt;Lie ring with 4 generators>, &lt;Lie ring with 0 generators> ]
 </Example>
 </Description>
@@ -528,7 +527,7 @@ gap> TensorWithField( K, GF(3) );
 gap> TensorWithField( K, GF(2) );
 &lt;Lie algebra of dimension 1 over GF(2)>
 gap> TensorWithField( K, GF(5) );
-&lt;Lie algebra over GF(5), with 0 generators>
+&lt;Lie algebra of dimension 0 over GF(5)>
 </Example>
 </Description>
 </ManSection>
@@ -570,9 +569,9 @@ gap> rels := [ a^13, b^13/g, c^13, d^13, e^13, f^13, g^13,
 gap> G := PcGroupFpGroup( F/rels );
 &lt;pc group of size 62748517 with 7 generators>
 gap> r:= PGroupToLieRing(G);
-rec( pgroup := &lt;pc group of size 62748517 with 7 generators>, 
-liering := &lt;Lie ring with 6 generators>, 
-GtoL := function( g0 ) ... end, LtoG := function( x0 ) ... end )
+rec( GtoL := function( g0 ) ... end, LtoG := function( x0 ) ... end, 
+  liering := &lt;Lie ring with 6 generators>, 
+  pgroup := &lt;pc group of size 62748517 with 7 generators> )
 gap> f:= r.GtoL; h:= r.LtoG;
 function( g0 ) ... end
 function( x0 ) ... end
@@ -609,9 +608,9 @@ gap> rels:= [ (b*a)*b, c*a, c*b-(b*a)*a, 7^2*a, 7*b-((b*a)*a)*a,
 gap> K:= FpLieRing( L, rels );
 &lt;Lie ring with 5 generators>
 gap> r:= LieRingToPGroup(K);
-rec( pgroup := &lt;pc group of size 823543 with 7 generators>, 
-liering := &lt;Lie ring with 5 generators>, 
-LtoG := function( x0 ) ... end, GtoL := function( g0 ) ... end )
+rec( GtoL := function( g0 ) ... end, LtoG := function( x0 ) ... end, 
+  liering := &lt;Lie ring with 5 generators>, 
+  pgroup := &lt;pc group of size 823543 with 7 generators> )
 gap> G:= r.pgroup;; f:= r.LtoG;; h:= r.GtoL;;
 gap> u:= 5*Basis(K)[2]+9*Basis(K)[5];
 5*v_2+9*v_5
