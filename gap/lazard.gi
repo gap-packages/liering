@@ -429,8 +429,8 @@ InstallMethod( PGroupToLieRing,
    # G : p-group.
    # we get the Lie ring and .. .
 
-   if not IsPGroup(G) then
-      Error("The group G is not a p-group.");
+   if not IsPGroup(G) or not IsFinite(G) then
+      Error("The group G is not a finite p-group.");
    fi;
 
    if not IsBound( LRPrivateFunctions.LAZARDTrec.G_SUM ) then
