@@ -10,8 +10,8 @@
 SetPackageInfo( rec(
 PackageName := "LieRing",
 Subtitle := "Computing with finitely presented Lie rings",
-Version := "2.4.1",
-Date := "23/02/2019", # dd/mm/yyyy format
+Version := "2.4.2",
+Date := "10/02/2022", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 Persons := [
