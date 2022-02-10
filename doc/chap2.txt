@@ -70,7 +70,7 @@
   
   [1X2.2-1 IsLieRing[101X
   
-  [33X[1;0Y[29X[2XIsLieRing[102X[32X filter[133X
+  [33X[1;0Y[29X[2XIsLieRing[102X [32X filter[133X
   
   [33X[0;0YThis is the category of finite-dimensional Lie rings.[133X
   
