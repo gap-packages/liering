@@ -81,7 +81,7 @@ InstallMethod( PrintObj,
 #M  \<( <m1>, <m2> ) . . . . . . . . . . . . . . for two Falg elements
 #M  \=( <m1>, <m2> ) . . . . . . . . . . . . . . for two Falg elements
 #M  \+( <m1>, <m2> ) . . . . . . . . . . . . . . for two Falg elements
-#M  \AINV( <m> )     . . . . . . . . . . . . . . for a Falg element
+#M  \-( <m> )     . . . . . . . . . . . . . . for a Falg element
 #M  \in( <U>, <u> )  . . . . . . . . . . . . . . for Free algebra, and element
 ##
 InstallMethod( ZeroOp,
@@ -409,7 +409,7 @@ LRPrivateFunctions.special_mult:= function( F, x1, f1, x2, f2, x3, f3 )
 end;
 
 
-InstallMethod( AINV,
+InstallMethod( AdditiveInverseSameMutability,
         "for FAlg element",
         true, [ IsFAlgElement ], 0,
         function( x )
@@ -423,7 +423,7 @@ InstallMethod( AINV,
     return ObjByExtRep( FamilyObj(x), ex );
 end );
 
-InstallMethod( AINV_MUT,
+InstallMethod( AdditiveInverseMutable,
         "for FAlg element",
         true, [ IsFAlgElement ], 0,
         function( x )

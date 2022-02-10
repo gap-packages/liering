@@ -71,7 +71,7 @@ end );
 #M  \<( <m1>, <m2> ) . . . . . . . . . . . . . . for two LR elements
 #M  \=( <m1>, <m2> ) . . . . . . . . . . . . . . for two LR elements
 #M  \+( <m1>, <m2> ) . . . . . . . . . . . . . . for two LR elements
-#M  \AINV( <m> )     . . . . . . . . . . . . . . for a LR element
+#M  \-( <m> )     . . . . . . . . . . . . . . for a LR element
 #M  \in( <U>, <u> )  . . . . . . . . . . . . . . for LR, and element
 ##
 
@@ -125,7 +125,7 @@ InstallMethod( \+,
 end );
 
 
-InstallMethod( AINV,
+InstallMethod( AdditiveInverseSameMutability,
         "for LR element",
         true, [ IsLRElement  ], 0,
         function( x )
@@ -139,7 +139,7 @@ InstallMethod( AINV,
     return ObjByExtRep( FamilyObj(x), ex );
 end );
 
-InstallMethod( AINV_MUT,
+InstallMethod( AdditiveInverseMutable,
         "for LR element",
         true, [ IsLRElement  ], 0,
         function( x )
