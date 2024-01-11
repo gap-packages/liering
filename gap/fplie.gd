@@ -13,9 +13,7 @@
 #G  LRPrivateFunctions
 ##
 ## 
-DeclareGlobalVariable( "LRPrivateFunctions", 
-       "Private functions for LieRing package" );
-
+BindGlobal( "LRPrivateFunctions", rec() );
 
 
 ##############################################################################
