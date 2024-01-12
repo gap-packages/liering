@@ -9,10 +9,6 @@
 
 
 # Functions for working with free algebras.
-# first we install the record containing all 
-# sorts of functions we want to write protect
-
-InstallValue( LRPrivateFunctions, rec() );
 
 ############################################################################
 ##
