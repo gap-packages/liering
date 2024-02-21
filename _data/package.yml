@@ -1,5 +1,6 @@
 name: LieRing
-version: 2.4.2
+version: "2.4.2"
+license: "GPL-2.0-or-later"
 date: 2022-02-10
 description: |
     Computing with finitely presented Lie rings
