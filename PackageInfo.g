@@ -74,7 +74,6 @@ PackageDoc := rec(
   PDFFile   := "doc/manual.pdf",
   SixFile   := "doc/manual.six",
   LongTitle := "Computing with finitely presented Lie rings",
-  Autoload  := true
 ),
 
 AbstractHTML := "The package <span class=\"pkgname\">LieRing</span> contains \
