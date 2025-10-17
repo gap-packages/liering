@@ -142,11 +142,14 @@ For the algorithms used we refer to <Cite Key="cicgravl"/>.
    <Meth Name="FreeLieRing"  Arg="R, names" 
          Comm="ring and list of names"/>
    <Meth Name="FreeLieRing"  Arg="R, names, deg" 
-         Comm="ring and list of names and grading"/>
+         Comm="ring and list of names and grading"
+         Label="FreeLieRingNamesDeg"/>
    <Meth Name="FreeLieRing"  Arg="R, k" 
-         Comm="ring and integer"/>
+         Comm="ring and integer"
+         Label="FreeLieRingK"/>
    <Meth Name="FreeLieRing"  Arg="R, k, deg" 
-         Comm="ring and integer and grading"/>
+         Comm="ring and integer and grading"
+         Label="FreeLieRingKDeg"/>
    <Description>
 
 Here <A>R</A> is a ring, which has to be either the integers, or a
